@@ -44,6 +44,16 @@ export default defineConfig({
 		// false = browser visible
 		// true = browser hidden (headless mode)
 		headless: false,
+
+		// Disable Playwright's default viewport (1280x720)
+		// and use the actual browser window size
+		viewport: null,
+
+		// Launch browser in maximized mode
+		// Helps avoid responsive layout issues and UI shifts
+		launchOptions: {
+			args: ['--start-maximized']
+		}
 	},
 
 	// Maximum execution time allowed per test
